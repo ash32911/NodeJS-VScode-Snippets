@@ -1,0 +1,624 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Require Module": {
+        "prefix": "req",
+        "body": [
+			"const ${1:module} = require('${1:module}');"
+        ],
+        "description": "Require Module for node JS"
+	},
+	
+	"Export Module": {
+        "prefix": "exp",
+        "body": [
+			"module.exports = ${1:module};"
+        ],
+        "description": "Require Module for node JS"
+	},
+	  "require": {
+		"prefix": "require",
+		"body": "require('${1:module}');",
+		"description": "require"
+	  },
+	  "exports": {
+		"prefix": "ex",
+		"body": "exports.${1:name} = ${2:value};",
+		"description": "exports"
+	  },
+	  "module.exports": {
+		"prefix": "me",
+		"body": "module.exports = ${1:name};",
+		"description": "module.exports"
+	  },
+	  "callback": {
+		"prefix": "cb",
+		"body": "function (err, ${1:arg}) {\n  ${2:}\n}",
+		"description": "callback"
+	  },
+	  "path.join()": {
+		"prefix": "pjoin",
+		"body": "path.join(${1:});",
+		"description": "path.join()"
+	  },
+	  "path.resolve()": {
+		"prefix": "pres",
+		"body": "path.resolve(${1:});",
+		"description": "path.resolve()"
+	  },
+	  "path.dirname()": {
+		"prefix": "pdir",
+		"body": "path.dirname(${1:});",
+		"description": "path.dirname()"
+	  },
+	  "path.basename()": {
+		"prefix": "pbase",
+		"body": "path.basename(${1:});",
+		"description": "path.basename()"
+	  },
+	  "path.extname()": {
+		"prefix": "pext",
+		"body": "path.extname(${1:});",
+		"description": "path.extname()"
+	  },
+	  "fs.readFile": {
+		"prefix": "fsread",
+		"body": "fs.readFile(${1:file}, ${2:charset}, function () {${3:}});",
+		"description": "fs.readFile"
+	  },
+	  "fs.createReadStream": {
+		"prefix": "fsreadstream",
+		"body": "fs.createReadStream(${1:file}, ${2:options});",
+		"description": "fs.createReadStream"
+	  },
+	  "fs.writeFile": {
+		"prefix": "fswrite",
+		"body": "fs.writeFile(${1:file}, ${2:content}, function () {${3:}});",
+		"description": "fs.writeFile"
+	  },
+	  "event handler": {
+		"prefix": "on",
+		"body": "${1:emitter}.on('${2:event}', (${3:arguments}) => {\n\t${4:}\n});",
+		"description": "event handler"
+	  },
+	  "readable stream": {
+		"prefix": "rstream",
+		"body": "var rs = new stream.Readable(${1:options});",
+		"description": "readable stream"
+	  },
+	  "writable stream": {
+		"prefix": "wstream",
+		"body": "var ws = new stream.Writable(${1:options});",
+		"description": "writable stream"
+	  },
+	  "pipe": {
+		"prefix": "pipe",
+		"body": "rs.pipe(ws);",
+		"description": "pipe"
+	  },
+	  "process.env": {
+		"prefix": "penv",
+		"body": "process.env.$1",
+		"description": "process.env"
+	  },
+	  "process.cwd": {
+		"prefix": "process.cwd",
+		"body": "process.cwd()",
+		"description": "process.cwd"
+	  },
+	  "process.on": {
+		"prefix": "process.on()",
+		"body": "process.on(${1:}, (${2:})=> {});",
+		"description": "process.on"
+	  },
+	  "process.nextTick()": {
+		"prefix": "nexttick",
+		"body": "process.nextTick((${1:arg}) => {\n\t${2:}\n});",
+		"description": "process.nextTick()"
+	  },
+	  "process.pid": {
+		"prefix": "process.pid",
+		"body": "process.pid",
+		"description": "process.pid"
+	  },
+	  "process.stdin": {
+		"prefix": "stdin",
+		"body": "process.stdin",
+		"description": "process.stdin"
+	  },
+	  "process.stderr": {
+		"prefix": "process.stderr",
+		"body": "process.stderr",
+		"description": "process.stderr"
+	  },
+	  "process.stdout": {
+		"prefix": "process.stdout",
+		"body": "process.stdout",
+		"description": "process.stdout"
+	  },
+	  "process.version": {
+		"prefix": "process.version",
+		"body": "process.version",
+		"description": "process.version"
+	  },
+	  "process.uptime()": {
+		"prefix": "process.uptime",
+		"body": "process.uptime",
+		"description": "process.uptime()"
+	  },
+	  "process.argv": {
+		"prefix": "process.argv",
+		"body": "process.argv",
+		"description": "process.argv"
+	  },
+	  "process.exit()": {
+		"prefix": "process.exit",
+		"body": "process.exit(${1:});",
+		"description": "process.exit()"
+	  },
+	  "process.kill()": {
+		"prefix": "process.kill",
+		"body": "process.kill(${1:});",
+		"description": "process.kill()"
+	  },
+	  "__dirname": {
+		"prefix": "dirn",
+		"body": "__dirname",
+		"description": "__dirname"
+	  },
+	  "const util": {
+		"prefix": "util",
+		"body": "const util = require('util');",
+		"description": "const util"
+	  },
+	  "const http": {
+		"prefix": "http",
+		"body": "const http = require('http');",
+		"description": "const http"
+	  },
+	  "const fs": {
+		"prefix": "fs",
+		"body": "const fs = require('fs');",
+		"description": "const fs"
+	  },
+	  "const path": {
+		"prefix": "path",
+		"body": "const path = require('path');",
+		"description": "const path"
+	  },
+	  "const zlib": {
+		"prefix": "zlib",
+		"body": "const zlib = require('zlib');",
+		"description": "const zlib"
+	  },
+	  "const stream": {
+		"prefix": "stream",
+		"body": "const stream = require('stream');",
+		"description": "const stream"
+	  },
+	  "const querystring": {
+		"prefix": "qstring",
+		"body": "const querystring = require('querystring');",
+		"description": "const querystring"
+	  },
+	  "const assert": {
+		"prefix": "assert",
+		"body": "const assert = require('assert');",
+		"description": "const assert"
+	  },
+	  "const url": {
+		"prefix": "url()",
+		"body": "const url = require('url');",
+		"description": "const url"
+	  },
+	  "const string decoder": {
+		"prefix": "stringdecoder",
+		"body": "const { StringDecoder } = require('string_decoder');",
+		"description": "const string decoder"
+	  },
+	  "console.log": {
+		"prefix": "clog",
+		"body": "console.log(${1:});",
+		"description": "console.log"
+	  },
+	  "console.info": {
+		"prefix": "ci",
+		"body": "console.info(${1:});",
+		"description": "console.info"
+	  },
+	  "console.error": {
+		"prefix": "ce",
+		"body": "console.error(${1:});",
+		"description": "console.error"
+	  },
+	  "console.dir": {
+		"prefix": "cd",
+		"body": "console.dir(${1:});",
+		"description": "console.dir"
+	  },
+	  "console.warn": {
+		"prefix": "cw",
+		"body": "console.warn(${1:});",
+		"description": "console.warn"
+	  },
+	  "console.group": {
+		"prefix": "cg",
+		"body": "console.group(${1:});",
+		"description": "console.group"
+	  },
+	  "console.groupEnd": {
+		"prefix": "cge",
+		"body": "console.groupEnd(${1:});",
+		"description": "console.groupEnd"
+	  },
+	  "assert.equal": {
+		"prefix": "assert.equal",
+		"body": "assert.equal(${1:actual}, ${2:expected});",
+		"description": "assert.equal"
+	  },
+	  "assert.notEqual": {
+		"prefix": "assert.notEqual",
+		"body": "assert.notEqual(${1:actual}, ${2:expected});",
+		"description": "assert.notEqual"
+	  },
+	  "assert.deepEqual": {
+		"prefix": "assert.deepEqual",
+		"body": "assert.deepEqual(${1:actual}, ${2:expected});",
+		"description": "assert.deepEqual"
+	  },
+	  "assert.ok": {
+		"prefix": "assert.ok",
+		"body": "assert.ok(${1:actual});",
+		"description": "assert.ok"
+	  },
+	  "assert.ifError": {
+		"prefix": "assert.ifError",
+		"body": "assert.ifError(${1:actual});",
+		"description": "assert.ifError"
+	  },
+	  "Promise": {
+		"prefix": "p",
+		"body": "new Promise((resolve, reject) => {\n\t${1:}\n});",
+		"description": "Promise"
+	  },
+	  "Promise.then": {
+		"prefix": "pthen",
+		"body": "${1:promise}.then((${2:value}) => {\n\t${3:}\n});",
+		"description": "Promise.then"
+	  },
+	  "Promise Catch": {
+		"prefix": "pcatch",
+		"body": "${1:promise}.catch((${2:err}) => {\n\t${3:}\n});",
+		"description": "Promise Catch"
+	  },
+	  "setInterval": {
+		"prefix": "si",
+		"body": "setInterval(() => {\n\t${1:}\n},${2:delay})",
+		"description": "setInterval"
+	  },
+	  "setTimeout": {
+		"prefix": "st",
+		"body": "setTimeout(() => {\n\t${1:}\n},${2:delay})",
+		"description": "setTimeout"
+	  },
+	  "setImmediate": {
+		"prefix": "sim",
+		"body": "setImmediate(() => {\n\t${1:}\n})",
+		"description": "setImmediate"
+	  },
+	  "describe": {
+		"prefix": "desc",
+		"body": "describe('${1:description}', () => {\n\t${2:}\n});",
+		"description": "describe"
+	  },
+	  "it -async": {
+		"prefix": "itasync",
+		"body": "it('should ${1:}', (done) => {\n\t${2:}\ndone();\n});",
+		"description": "it -async"
+	  },
+	  "it -sync": {
+		"prefix": "it",
+		"body": "it('should ${1:}', () => {\n\t${2:}\n});",
+		"description": "it -sync"
+	  },
+	  "it -pending": {
+		"prefix": "itpending",
+		"body": "it('should ${1:}');",
+		"description": "it -pending"
+	  },
+	  "before": {
+		"prefix": "bef",
+		"body": "before(() => {\n\t${1:}\n});",
+		"description": "before"
+	  },
+	  "after": {
+		"prefix": "aft",
+		"body": "after(() => {\n\t${1:}\n});",
+		"description": "after"
+	  },
+	  "beforeEach": {
+		"prefix": "befe",
+		"body": "beforeEach(() => {\n\t${1:}\n});",
+		"description": "beforeEach"
+	  },
+	  "afterEach": {
+		"prefix": "afte",
+		"body": "afterEach(() => {\n\t${1:}\n});",
+		"description": "afterEach"
+	  },
+	  "expect": {
+		"prefix": "expect",
+		"body": "const expect = require('chai').expect;",
+		"description": "expect"
+	  },
+	  "expect equal": {
+		"prefix": "expecte",
+		"body": "expect(${1:actual}).to.equal(${2:expected});",
+		"description": "expect equal"
+	  },
+	  "expect notEqual": {
+		"prefix": "expectne",
+		"body": "expect(${1:actual}).to.not.equal(${2:expected});",
+		"description": "expect notEqual"
+	  },
+	  "expect deep equal": {
+		"prefix": "expectde",
+		"body": "expect(${1:actual}).to.eql(${2:expected});",
+		"description": "expect deep equal"
+	  },
+	  "expect not deep equal": {
+		"prefix": "expectnde",
+		"body": "expect(${1:actual}).to.not.eql(${2:expected});",
+		"description": "expect not deep equal"
+	  },
+	  "key:value pair": {
+		"prefix": "kv",
+		"body": "${1:key}: ${2:value}",
+		"description": "key:value pair"
+	  },
+	  "method for object": {
+		"prefix": "fnm",
+		"body": "${1:method}: function (${}) {\n  ${2:}\n}",
+		"description": "method for object"
+	  },
+	  "anonymous function": {
+		"prefix": "fn",
+		"body": "function (${1:arg}, ${2:arg}) {\n  ${3:}\n}",
+		"description": "anonymous function"
+	  },
+	  "anonymous function without parameter": {
+		"prefix": "fno",
+		"body": "function (${1:}) {\n  ${2:}\n}",
+		"description": "anonymous function without parameter"
+	  },
+	  "named function": {
+		"prefix": "fnn",
+		"body": "function ${1:name} (${2:arg}) {\n  ${3:}\n}",
+		"description": "named function"
+	  },
+	  "function expression": {
+		"prefix": "fne",
+		"body": "const ${1:name} = (${2:arg}) => {\n  ${3:}\n};",
+		"description": "function expression"
+	  },
+	  "immediately invoked function expression": {
+		"prefix": "iife",
+		"body": "(function(${1:window}, ${2:document}) {\n  \t${0:// body...}\n})();",
+		"description": "immediately invoked function expression"
+	  },
+	  "return": {
+		"prefix": "r",
+		"body": "return ${1:};",
+		"description": "return"
+	  },
+	  "return true": {
+		"prefix": "rt",
+		"body": "return true;",
+		"description": "return true"
+	  },
+	  "return false": {
+		"prefix": "rt",
+		"body": "return false;",
+		"description": "return false"
+	  },
+	  "return promise": {
+		"prefix": "rp",
+		"body": "return new Promise((resolve, reject) => {\n\t${1:}\n});",
+		"description": "return promise"
+	  },
+	  "length": {
+		"prefix": "len",
+		"body": "length",
+		"description": "length"
+	  },
+	  "alert": {
+		"prefix": "al",
+		"body": "alert('${1:}');",
+		"description": "alert"
+	  },
+	  "import": {
+		"prefix": "imp",
+		"body": "import ${1:name} from ${2:module}",
+		"description": "import"
+	  },
+	  "arrow fn with params": {
+		"prefix": "ar",
+		"body": "(${1:arg1}, ${2:arg2}) => {\n  ${3:}\n}",
+		"description": "arrow fn with params"
+	  },
+	  "arrow fn without params": {
+		"prefix": "aro",
+		"body": "() => {\n  ${1:}\n}",
+		"description": "arrow fn without params"
+	  },
+	  "arrow fn named": {
+		"prefix": "arn",
+		"body": "const ${1:name} = () => {\n\t${2:}\n};",
+		"description": "arrow fn named"
+	  },
+	  "callback ES6": {
+		"prefix": "cb6",
+		"body": "(err, ${1:arg}) => {\n  ${2:}\n}",
+		"description": "callback ES6"
+	  },
+	  "method ES6": {
+		"prefix": "meth",
+		"body": "${1:method} (${}) {\n  ${2:}\n}",
+		"description": "method ES6"
+	  },
+	  "getter": {
+		"prefix": "get",
+		"body": "get ${1:}() {\n\t${0}\n}",
+		"description": "getter"
+	  },
+	  "setter": {
+		"prefix": "set",
+		"body": "set ${1:}(${2:val}) {\n\t${0}\n}",
+		"description": "setter"
+	  },
+	  "JSON.parse": {
+		"prefix": "jparse",
+		"body": "JSON.parse(${1:});",
+		"description": "JSON.parse"
+	  },
+	  "JSON.stringify": {
+		"prefix": "jstr",
+		"body": "JSON.stringify(${1:});",
+		"description": "JSON.stringify"
+	  },
+	  "use strict": {
+		"prefix": "us;",
+		"body": "'use strict';",
+		"description": "use strict"
+		},
+		"Express App": {
+			"prefix": "exp-app",
+			"body": [
+				"var express = require('express');",
+				"var app     = express();",
+				"app.get('/', (req, res) => {",
+				"    res.send('hello');",
+				"});",
+				"app.set('port', process.env.PORT || 3000);",
+				"var server = app.listen(app.get('port'), function() {",
+				"    debug('Express server listening on port ' + server.address().port);",
+				"});"
+			],
+			"description": "Express App"
+		},
+		"App get": {
+			"prefix": ".get",
+			"body": [
+				"router.get('/${1}', (req, res) => {",
+				"    res.render('${1}');",
+				"});"
+			],
+			"description": "App get"
+		},
+		"App post": {
+			"prefix": ".post",
+			"body": [
+				"router.post('/${1}', (req, res) => {",
+				"    res.send();",
+				"});"
+			],
+			"description": "App post"
+		},
+		"App put": {
+			"prefix": ".put",
+			"body": [
+				"router.put('/${1}', (req, res) => {",
+				"    res.send();",
+				"})"
+			],
+			"description": "App put"
+		},
+		"App Delete": {
+			"prefix": ".del",
+			"body": [
+				"router.delete('/${1}', (req, res) => {",
+				"    res.send();",
+				"})"
+			],
+			"description": "App put"
+		},
+		"Mongoose Model": {
+			"prefix": "model",
+			"body": [
+				"var mongoose     = require('mongoose');",
+				"var Schema       = mongoose.Schema;",
+				"var ${1}Schema    = new Schema({",
+				"",
+				"});",
+				"module.exports = mongoose.model('${2}', ${1});"
+			],
+			"description": "Mongoose Model"
+		},
+		"Mongoose Find One": {
+			"prefix": "findone",
+			"body": [
+				"${1:Entity}.findOne({ _id: req.params.id}, function(err, ${2:entity}) {",
+				"    if (err) {",
+				"        return res.send(err);",
+				"    }",
+				"    res.json(${3:entity});",
+				"});"
+			],
+			"description": "Mongoose Find One"
+		},
+		"Mongoose Find": {
+			"prefix": ".find",
+			"body": [
+				"${1:Entity}.find({ _id: req.params.id}, function(err, ${2:entity}) {",
+				"    if (err) {",
+				"        return res.send(err);",
+				"    }",
+				"    res.json(${3:entity});",
+				"});"
+			],
+			"description": "Mongoose Find One"
+		},
+		"Mongoose remove": {
+			"prefix": "remove",
+			"body": [
+				"${1:Entity}.remove({",
+				"    id: req.params.${2:entity_id}",
+				"}, function(err, ${3:entity}) {",
+				"    if (err) {",
+				"        res.send(err); }",
+				"    res.json({ message: 'Successfully deleted' });",
+				"});"
+			],
+			"description": "Mongoose remove"
+		},
+		"Mongoose Connect": {
+			"prefix": "connect",
+			"body": [
+				"mongoose.connect('mongodb://${1:node@.net}:27017/${2:DBname}');"
+			],
+			"description": "Mongoose Connect"
+		},
+		"Mongoose Connection": {
+			"prefix": "connection",
+			"body": [
+				"mongoose.connection",
+				"    .once('open', () => {console.log('Opened Connection')})",
+				"    .on('error', (error) => {",
+				"      console.warn('Mongoose Error: ', error);",
+				"    });"
+			],
+			"description": "Mongoose Connection"
+		}
+}
